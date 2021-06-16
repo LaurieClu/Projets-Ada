@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carbonara.css">
+ <title>Recette Carbonara</title>
+</head>
+   
+    <body>
+        <div>
+            <h2>Recette</h2>
+        <h1>Pâtes Carbonara </h1>
+        <br>
+        
+            <div class= "para"><u>Nombre d'ingredients requis :</u> &nbsp;<span id="recette"></span></div>
+           <!--<p id="recette"></p>--> 
+            <p id="liste"></p>
+            <p id="tableau"></p>
+        </div>
+        <script>
+            let Ingredients = document.getElementById("recette");
+            var recette = ['Pates', 'Creme', 'Oeuf', 'Sel', 'Poivre', 'Lardon', 'Oignon'];
+                Ingredients.innerHTML = recette.length;
+                console.log(recette.length);
+
+            let listeIngredients = document.getElementById("liste"); 
+            //listeIngredients.innerHTML = recette;
+            //console.log(recette);
+
+            for ( let i= 0; i < recette.length; i++){
+            let y =i +1; 
+            recette.sort();
+            console.log(y + "." + "" + recette[i]);
+            document.getElementById("tableau").innerHTML = document.getElementById("tableau").innerHTML + y + "." + " " + recette[i] + "<br/>";
+            };
+        </script>
+       
+    </body>
+</html>
