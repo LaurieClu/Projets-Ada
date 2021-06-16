@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var x =9 ;
+var iMilieu;
+var i =0;
+
+// Centrer l'étoile en haut du sapin
+document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"); 
+
+//l'étoile du sapin
+ for (i= 0; i < 1; i++){
+          document.write("+");
+          document.write("<br>");
+      }
+
+//s'occupe de générer les * et de les aligner correctement
+for ( i=1 ; i < x; i++) {
+    
+    for (j=x-1; j>i; j--) {
+      document.write("&nbsp&nbsp"); 
+   }
+   for ( iMilieu=0; iMilieu<1; iMilieu++){
+       document.write("/*");
+   }
+   for ( iMilieu=0; iMilieu<=(i*2-3); iMilieu++) {
+      document.write("*"); 
+   }
+   for ( iMilieu=0; iMilieu<1; iMilieu++){
+       document.write("*\\");
+   
+}
+   document.write("<br>");
+} 
+
+//tronc
+for (let i=0; i<3; i++) {
+    for (let j=0; j<(x*2)-3; j++) {
+        document.write("&nbsp");
+    }
+    document.write("##<br>");
+}
+
+document.write(`<pre>${xmas(10)}</pre>`);
+
+    </script>
+</body>
+</html>
